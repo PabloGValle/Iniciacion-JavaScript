@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejercicio14</title>
+  </head>
+  <body>
+    <script language="javascript">
+
+      var contador;
+      contador = 1;
+      while (contador < 5) {
+        let dato = prompt("Introduce número del 1 al 10:", "");
+        var num=parseInt(dato);
+        document.write(` El numero introducido es ${num} </br> `);
+        document.write(` El contador es ${contador} </br> `);
+        if (num == 7) {
+          break;
+        }
+        contador = contador + 1;
+      }
+      </script>
+  </body>
+
+</html>
