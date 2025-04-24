@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Descuentos Agencia de Viajes</title>
+  </head>
+  <body>
+    <h2>Calculadora de Descuentos - Agencia de Viajes</h2>
+
+    <label for="origen">Ciudad de Origen:</label>
+    <select id="origen">
+      <option value="Palma">Palma</option>
+      <option value="Otra">Otra ciudad</option>
+    </select>
+
+    <br /><br />
+
+    <label for="destino">Ciudad de Destino:</label>
+    <select id="destino">
+      <option value="Barcelona">Barcelona</option>
+      <option value="Madrid">Madrid</option>
+      <option value="Valencia">Valencia</option>
+      <option value="Otro">Otro destino</option>
+    </select>
+
+    <br /><br />
+
+    <button id="calcular">Calcular Descuento</button>
+
+    <p id="resultado"></p>
+
+    <script>
+      document.getElementById("calcular").onclick = function () {
+        let origen = document.getElementById("origen").value;
+        let destino = document.getElementById("destino").value;
+        let resultado = document.getElementById("resultado");
+        let descuento = 0;
+
+        if (origen === "Palma") {
+          if (destino === "Barcelona") {
+            descuento = 5;
+          } else if (destino === "Madrid") {
+            descuento = 10;
+          } else if (destino === "Valencia") {
+            descuento = 15;
+          } else {
+            resultado.textContent =
+              "No hay descuento disponible para ese destino.";
+            return;
+          }
+          resultado.textContent =
+            "El descuento aplicado es de " + descuento + "%.";
+        } else {
+          resultado.textContent =
+            "No hay descuentos disponibles para esa ciudad de origen.";
+        }
+      };
+    </script>
+  </body>
+</html>
