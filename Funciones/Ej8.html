@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" />
+    <title>Suma de dos números</title>
+    <script>
+      // Función para mostrar la suma de dos números
+      function mostrarSuma() {
+        // Obtener los valores de los campos de texto
+        var numero1 = parseFloat(document.getElementById("numero1").value);
+        var numero2 = parseFloat(document.getElementById("numero2").value);
+
+        // Comprobar que los números son válidos
+        if (isNaN(numero1) || isNaN(numero2)) {
+          document.getElementById("resultado").innerHTML =
+            "Por favor, introduce dos números válidos.";
+        } else {
+          // Realizar la suma y mostrar el resultado
+          var suma = numero1 + numero2;
+          document.getElementById("resultado").innerHTML =
+            "La suma es: " + suma;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Programa para sumar dos números</h1>
+
+    <p>Introduce dos números para sumarlos:</p>
+
+    <!-- Campos de texto para introducir los números -->
+    <label for="numero1">Número 1:</label>
+    <input
+      type="number"
+      id="numero1"
+      placeholder="Introduce el primer número"
+    /><br /><br />
+
+    <label for="numero2">Número 2:</label>
+    <input
+      type="number"
+      id="numero2"
+      placeholder="Introduce el segundo número"
+    /><br /><br />
+
+    <!-- Botón para realizar la suma -->
+    <button onclick="mostrarSuma()">Mostrar la suma</button>
+
+    <!-- Donde se mostrará el resultado -->
+    <p id="resultado"></p>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script>
+      // Función tradicional para convertir Celsius a Fahrenheit
+      function pasarAFarenheit(grado) {
+        return grado * 1.8 + 32;
+      }
+
+      // Función tradicional para convertir Fahrenheit a Celsius
+      function pasarACelsius(gradoFarenheit) {
+        return (gradoFarenheit - 32) / 1.8;
+      }
+
+      // Ejemplo de uso de ambas funciones
+      var result = pasarAFarenheit(22);
+      alert("22 grados Celsius a Fahrenheit: " + result);
+
+      var resultCelsius = pasarACelsius(72); // 72 grados Fahrenheit a Celsius
+      alert("72 grados Fahrenheit a Celsius: " + resultCelsius);
+    </script>
+  </body>
+</html>

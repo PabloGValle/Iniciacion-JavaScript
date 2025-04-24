@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" />
+    <title>Saludo a dos personas</title>
+    <script>
+      // Función para saludar a dos personas
+      function Saludo(persona1, persona2) {
+        document.getElementById(
+          "salida"
+        ).innerHTML = `Hola ${persona1} y ${persona2}`;
+      }
+
+      // Función para capturar los nombres y llamar a Saludo
+      function mostrarSaludo() {
+        var persona1 = document.getElementById("persona1").value;
+        var persona2 = document.getElementById("persona2").value;
+
+        // Verificar si ambos campos están llenos
+        if (persona1 && persona2) {
+          Saludo(persona1, persona2);
+        } else {
+          document.getElementById("salida").innerHTML =
+            "Por favor, introduce ambos nombres.";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Función con dos parámetros</h1>
+    <p>Introduce los nombres de dos personas:</p>
+
+    <!-- Campos de texto para ingresar los nombres -->
+    <label for="persona1">Nombre 1:</label>
+    <input
+      type="text"
+      id="persona1"
+      placeholder="Introduce el primer nombre"
+    /><br /><br />
+
+    <label for="persona2">Nombre 2:</label>
+    <input
+      type="text"
+      id="persona2"
+      placeholder="Introduce el segundo nombre"
+    /><br /><br />
+
+    <!-- Botón para mostrar el saludo -->
+    <button onclick="mostrarSaludo()">Mostrar saludo</button>
+
+    <p id="salida">Aquí el resultado</p>
+  </body>
+</html>
